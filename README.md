@@ -1,44 +1,45 @@
 # AgularScaffolding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+A scaffolding in angular 7 to include auth and main strucrure to start projects.
 
 ## Init
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- For start with angular scaffolding,  we start create a repo and copy this structure to that
 
-## Code scaffolding
+### Create a repo 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In the current example we create from [BITBUCKET](https://bitbucket.org/)
 
-## Build
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%201.png?alt=media)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Then we have tow ways to do this the first is with bitbucket GUI, you must click in `import repository`
 
-## Running unit tests
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Then you need to add `https://github.com/rulorules99/angular-scaffolding.git`to URL input and click on import repository button you and will see the next screens.
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-2.png?alt=media)
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-3.png?alt=media)
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-4.png?alt=media)
 
-## Running end-to-end tests
+2. The second way is by console, we need to create only a repo put a name and click on create repository button.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202.png?alt=media)
+![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%203.png?alt=media)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## …or create a new repository on the command line
+- In console we have to clone a repo and following the next commands.
 ```
-echo "# agular-scaffolding" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/rulorules99/agular-scaffolding.git
-git push -u origin master
-
+>$ git clone https://github.com/rulorules99/angular-scaffolding.git
+>$ cd angular-scaffolding 
+>$ sudo rm -r .git 
+>$ git init
+>$ git add -A
+>$ git commit -m "first commit"
+>$ git remote add origin https://rulorules99@bitbucket.org/rulorules99/example.git
+>$ git push -u origin master
 ```
 
-## …or push an existing repository from the command line
-```
-git remote add origin https://github.com/rulorules99/agular-scaffolding.git
-git push -u origin master
-```
+- In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
+you must change for you own repository.
+
+
