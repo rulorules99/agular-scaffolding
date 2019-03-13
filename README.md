@@ -2,11 +2,11 @@
 
 A scaffolding in angular 7 to include auth and main strucrure to start projects.
 
-## Init
+## Quick start
 
 - For start with angular scaffolding,  we start create a repo and copy this structure to that
 
-### Create a repo 
+### Create a repository
 
 In the current example we create from [BITBUCKET](https://bitbucket.org/)
 
@@ -42,4 +42,7 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 - In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
 you must change for you own repository.
 
+## Quick start
+
+## Document
 
