@@ -42,7 +42,54 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 - In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
 you must change for you own repository.
 
-## Quick start
+## Scaffolding
+
+```
+src/
+├── app/
+│   ├── core/
+│   │   ├── components/
+│   │   |   └── index.ts
+│   │   ├── constants/
+│   │   |   └── index.ts
+│   │   ├── directives/
+│   │   |   └── index.ts
+│   │   ├── forms/
+│   │   |   └── index.ts
+│   │   ├── interfaces/
+│   │   |   └── index.ts
+│   │   ├── modules/
+│   │   |   └── index.ts
+│   │   ├── pipes/
+│   │   |   └── index.ts
+│   │   └── services/
+│   │       ├── http/
+│   │       |   ├── auth.service.ts
+│   │       |   ├── auth-guard.service.ts
+│   │       |   └── auth-guard-login.service.ts
+│   │       ├── http/
+│   │       |   └── api-http.interceptor.ts
+│   │       └── index.ts
+│   └── shared/
+│       ├── material.module.ts
+│       └── shared.module.ts
+└── assets/
+    ├── img/
+    └── scss/
+        ├── base/
+        │   └── _all.scss
+        ├── components/
+        │   └── _all.scss
+        ├── generic/
+        │   └── _all.scss
+        ├── settings/
+        │   └── _all.scss
+        ├── tools/
+        │   └── _all.scss
+        ├── trumps/
+        │   └── _all.scss
+        └── styles.scss
+```
 
 ## Document
 
