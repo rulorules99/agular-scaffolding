@@ -166,4 +166,13 @@ export class ExampleComponent {
 }
 ```
 
+### Interfaces
+- In interfaces we will create a Interface you will create manually
+
+Then export the component in the index folder `src/app/core/interfaces/index.ts` add the next line for each interface created
+
+``` javascript
+export * from './path/to/interface';
+```
+
 
