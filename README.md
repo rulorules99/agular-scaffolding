@@ -63,7 +63,7 @@ src/
 │   │   ├── pipes/
 │   │   |   └── index.ts
 │   │   └── services/
-│   │       ├── http/
+│   │       ├── auth/
 │   │       |   ├── auth.service.ts
 │   │       |   ├── auth-guard.service.ts
 │   │       |   └── auth-guard-login.service.ts
@@ -87,9 +87,83 @@ src/
         ├── tools/
         │   └── _all.scss
         ├── trumps/
-        │   └── _all.scss
+        │   └── _all.scss 
         └── styles.scss
 ```
 
 ## Document
+- Now we see how folders are included and what contains 
+
+### Components
+- In component we will create a components
+```
+>$ ng g c core/components/name-of-component
+```
+or
+```
+>$ ng generate component core/components/name-of-component
+```
+Then expot the component in the index folder `src/app/core/components/index.ts` add the next line for each component created
+
+``` javascript
+export * from './name-of-component/name-of-component.component';
+```
+
+### Constants
+- In constants we will create a constants clases you will create manually
+
+Then export the component in the index folder `src/app/core/constants/index.ts` add the next line for each constants created
+
+``` javascript
+export * from './path/to/constant';
+```
+
+### Directives
+- In directives we will create a directives
+```
+>$ ng g d core/directives/name-of-directive
+```
+or
+```
+>$ ng generate directive core/directives/name-of-directive
+```
+Then export the component in the index folder `src/app/core/directives/index.ts` add the next line for each component created
+
+``` javascript
+export * from export * from './name-of-directive.directive';
+```
+
+### Forms
+- In forms we will create a forms classes
+``` javascript
+import { Injectable } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+@Injectable()
+export class ExampleForm  {
+    public exampleForm: FormGroup = new FormGroup({
+        field: new FormControl('', Validators.required),
+    });
+}
+```
+Then export the form class in the index folder `src/app/core/forms/index.ts` add the next line for each form created
+
+``` javascript
+export * from export * from './example-form';
+```
+Usage in components `But remember` you nedd to add first in `module` of component.
+
+``` javascript
+import { ExampleForm } from '../../forms';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+})
+export class ExampleComponent {
+  constructor(public form: LoginForm) {}
+}
+```
+
 
