@@ -16,7 +16,10 @@ export class LoginComponent {
   */
   public onSubmit (): void {
 
-    this.success({data: {token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1NTE5ODY3ODYsImV4cCI6MjUzMDIwNzU5NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0.3savcQzU3EGvsMhWCKLEUC--Xbku0OnubbjOMH5SboE'}});
+    this.success({data: {token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aW' +
+    'xkZXIiLCJpYXQiOjE1NTE5ODY3ODYsImV4cCI6MjUzMDIwNzU5NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEB' +
+    'leGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5j' +
+    'b20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0.3savcQzU3EGvsMhWCKLEUC--Xbku0OnubbjOMH5SboE'}});
 
     // Uncommented when apply api service
     // this.auth.login(this.form.loginForm.value).then( this.success.bind(this)).catch( this.error.bind(this));
