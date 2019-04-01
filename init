@@ -21,8 +21,4 @@ for dir in "${paths[@]}"; do
     fi
 done
 
-sudo rm -r .git
-git init
-git add -A
-
 
