@@ -42,6 +42,103 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 - In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
 you must change for you own repository.
 
+### Change then project name
+For change the name in the project modify the next files
+ 
+- In `agular.json` change `angular-scaffolding` for you name project Example
+```
+  .....
+  "projects": {
+    "my-project-name": {
+    .....
+```
+
+```
+ .....
+ "build": {
+    "builder": "@angular-devkit/build-angular:browser",
+        "options": {
+           "outputPath": "dist/my-project-name",
+            "index": "src/index.html",
+            .......
+```
+
+```
+  .....
+  "serve": {
+   "builder": "@angular-devkit/build-angular:dev-server",
+   "options": {
+     "browserTarget": "my-project-name:build"
+   },
+   "configurations": {
+     "production": {
+       "browserTarget": "my-project-name:build:production"
+     },
+     "hmr": {
+       "hmr": true,
+       "browserTarget": "my-project-name:build:hmr"
+     },
+     "dev": {
+       "hmr": false,
+       "browserTarget": "my-project-name:build:dev"
+     },
+     "qa": {
+       "hmr": false,
+       "browserTarget": "my-project-name:build:qa"
+     }
+   }
+  .....
+```
+
+```
+  .....
+  "extract-i18n": {
+      "builder": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "my-project-name:build"
+      }
+    },
+    .....
+```
+
+```
+......
+"my-project-name-e2e": {
+  "root": "e2e/",
+  "projectType": "application",
+  "prefix": "",
+  "architect": {
+    "e2e": {
+      "builder": "@angular-devkit/build-angular:protractor",
+      "options": {
+        "protractorConfig": "e2e/protractor.conf.js",
+        "devServerTarget": "my-project-name:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "my-project-name:serve:production"
+        }
+      }
+    },
+ ......
+```
+
+```
+ ....
+ "defaultProject": "my-project-name"
+```
+- In `package.json` change `angular-scaffolding` for you name project Example
+```
+ "name": "my-project-name",
+ .......
+```
+
+- In the next files `e2e/src/app.e2e-spec.ts`, 
+`package-lock.json`, 
+`src/app/app.component.spec.ts`, 
+`src/app/app.component.ts` find `angular-scaffolding` and replace for the name of your project
+
+
 ## Scaffolding
 
 ```
@@ -91,11 +188,13 @@ src/
         └── styles.scss
 ```
 
-## Document
+# Document
 - Now we see how folders are included and what contains 
 
+## Core
+
 ### Components
-- In component we will create a components
+- In components we will create a component
 ```
 >$ ng g c core/components/name-of-component
 ```
@@ -103,23 +202,23 @@ or
 ```
 >$ ng generate component core/components/name-of-component
 ```
-Then expot the component in the index folder `src/app/core/components/index.ts` add the next line for each component created
+Then export the component in the index folder `src/app/core/components/index.ts` add the next line for each component created
 
 ``` javascript
 export * from './name-of-component/name-of-component.component';
 ```
 
 ### Constants
-- In constants we will create a constants clases you will create manually
+- In constants we will create a constant class you will create manually
 
-Then export the component in the index folder `src/app/core/constants/index.ts` add the next line for each constants created
+Then export the Constant in the index folder `src/app/core/constants/index.ts` add the next line for each constant created
 
 ``` javascript
 export * from './path/to/constant';
 ```
 
 ### Directives
-- In directives we will create a directives
+- In directives we will create a directive
 ```
 >$ ng g d core/directives/name-of-directive
 ```
@@ -127,14 +226,14 @@ or
 ```
 >$ ng generate directive core/directives/name-of-directive
 ```
-Then export the component in the index folder `src/app/core/directives/index.ts` add the next line for each component created
+Then export the directive in the index folder `src/app/core/directives/index.ts` add the next line for each directive created
 
 ``` javascript
 export * from export * from './name-of-directive.directive';
 ```
 
 ### Forms
-- In forms we will create a forms classes
+- In forms we will create a form class
 ``` javascript
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -169,10 +268,146 @@ export class ExampleComponent {
 ### Interfaces
 - In interfaces we will create a Interface you will create manually
 
-Then export the component in the index folder `src/app/core/interfaces/index.ts` add the next line for each interface created
+Then export the Interface in the index folder `src/app/core/interfaces/index.ts` add the next line for each interface created
 
 ``` javascript
 export * from './path/to/interface';
 ```
 
+### Modules
+- In modules we will create a module
+```
+>$ ng g m core/modules/name-of-module --routing
+```
+or
+```
+>$ ng generate module core/modules/name-of-module
+```
+Then export the module in the index folder `src/app/core/modules/index.ts` add the next line for each module created
+
+``` javascript
+export * from export * from './name-of-module.module';
+```
+
+### Pipes
+- In pipes we will create a pipe
+```
+>$ ng g p core/pipes/name-of-pipe
+```
+or
+```
+>$ ng generate pipe core/pipes/name-of-pipe
+```
+Then export the pipe in the index folder `src/app/core/pipes/index.ts` add the next line for each pipe created
+
+``` javascript
+export * from export * from './name-of-pipe.pipe';
+```
+
+### Services
+- In services we will create a service
+```
+>$ ng g s core/services/name-of-service
+```
+or
+```
+>$ ng generate service core/services/name-of-service
+```
+Then export the service in the index folder `src/app/core/services/index.ts` add the next line for each service created
+
+``` javascript
+export * from export * from './name-of-service.service';
+```
+
+## Generate resources
+For generate componets, services .... etc etc see the next links 
+[here](https://angular.io/cli/generate) 
+[here](https://angular.io/guide/lazy-loading-ngmodules)
+ 
+## Shared
+
+- In `app/shared/material.module.ts` we going to include all of angular material for export their modules
+- In `app/shared/shared.module.ts` we going to include all of own custom modules for export in complete app
+
+## Assets
+
+### img
+
+- We going to include all images and icons for app
+
+### Scss
+- We going to include all styles for app
+
+### base
+- Default styling on elements without classes, such as typography (h1, h2, etc) and base elements (html, body).
+- Then import the file in the file `src/assets/scss/base/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+### components
+- Defined parts of the site (navigation, header, footer, carousel) selected with classes, using BEM where appropriate.
+- Then import the file in the file `src/assets/scss/components/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+### generic
+- Very far reaching selectors. CSS resets where elements are selected directly and restting non-standard form behaviours.
+- Then import the file in the file `src/assets/scss/generic/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+### settings
+- Global SASS variables, maps, etc.
+- Then import the file in the file `src/assets/scss/settings/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+### tools
+-  SASS functions and mixins.
+- Then import the file in the file `src/assets/scss/tools/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+### trumps
+- Overrides, helpers, utilities and shame. The highest specificity and/or classes/properties that must always 'win', using the cascade to beat earlier properties.
+- Then import the file in the file `src/assets/scss/trumps/_all.scss` add the next line for each created
+
+```scss
+@import "path/relative/all";
+```
+
+## Using Matherial theme 
+If you want use a material theme and not your own you can comment the next lines in `src/assets/scss/styles.scss`
+```scss
+
+// @import "settings/all";
+
+// @import "tools/all";
+
+// @import "generic/all";
+
+// @import "base/all";
+
+// @import "components/all";
+
+// @import "trumps/all";
+```
+and then add in the bottom the select angular material theme, example
+
+```scss
+....
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+```
+
+For more information about custom theme of angular material [HERE](https://material.angular.io/guide/theming)
 
