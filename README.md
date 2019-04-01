@@ -11,18 +11,7 @@ A scaffolding in angular 7 to include auth and main strucrure to start projects.
 In the current example we create from [BITBUCKET](https://bitbucket.org/)
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%201.png?alt=media)
-
-1. Then we have tow ways to do this the first is with bitbucket GUI, you must click in `import repository`
-
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
-
-- Then you need to add `https://github.com/rulorules99/angular-scaffolding.git`to URL input and click on import repository button you and will see the next screens.
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-2.png?alt=media)
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-3.png?alt=media)
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-4.png?alt=media)
-
-2. The second way is by console, we need to create only a repo put a name and click on create repository button.
-
+ We need to create only a repo put a name and click on create repository button.
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202.png?alt=media)
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%203.png?alt=media)
