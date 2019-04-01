@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+[[ $# -eq 0 ]] && replace=${PWD##*/} || replace=$1
+
+echo $replace
+search="angular-scaffolding"
+
+dir1=src/app/app.component.ts
+dir2=angular.json
+dir3=package.json
+dir4=e2e/src/app.e2e-spec.ts
+dir5=package-lock.json
+dir6=src/app/app.component.spec.ts
+dir7=src/app/app.component.ts
+
+paths=( $dir1 $dir2 $dir3 $dir4 $dir5 $dir6 $dir7  )
+
+for dir in "${paths[@]}"; do
+    if [ -d $dir ]; then
+        sed -i "" "s|${search}|${replace}|g" $dir
+    fi
+done
+
+sudo rm -r .git
+git init
+git add -A
+
+
