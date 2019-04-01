@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+[[ $# -eq 0 ]] && exit 0 || repo=$1
+
+echo $repo
+
+sudo rm -r .git
+git init
+git add -A
+git commit -m "first commit"
+git remote add origin $repo
+git push -u origin master
