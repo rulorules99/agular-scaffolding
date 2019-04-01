@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[[ $# -eq 0 ]] && exit 0 || repo=$1
+[[ $# -eq 0 ]] && { echo 'you must supply a repo path' ; exit 0; } || repo=$1
 
 echo $repo
 
