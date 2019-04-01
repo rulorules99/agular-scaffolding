@@ -21,7 +21,7 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 >$ git clone https://github.com/rulorules99/angular-scaffolding.git
 >$ cd angular-scaffolding
 >$ ./init-repo https://rulorules99@bitbucket.org/rulorules99/example.git
->$ ./init
+>$ ./init name-of-project
 ```
 
 - In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
