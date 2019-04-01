@@ -11,18 +11,7 @@ A scaffolding in angular 7 to include auth and main strucrure to start projects.
 In the current example we create from [BITBUCKET](https://bitbucket.org/)
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%201.png?alt=media)
-
-1. Then we have tow ways to do this the first is with bitbucket GUI, you must click in `import repository`
-
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
-
-- Then you need to add `https://github.com/rulorules99/angular-scaffolding.git`to URL input and click on import repository button you and will see the next screens.
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-2.png?alt=media)
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-3.png?alt=media)
-![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-4.png?alt=media)
-
-2. The second way is by console, we need to create only a repo put a name and click on create repository button.
-
+ We need to create only a repo put a name and click on create repository button.
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202-1.png?alt=media)
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%202.png?alt=media)
 ![alt text](https://firebasestorage.googleapis.com/v0/b/files-b13c3.appspot.com/o/angular-scaffolding%2Fcreate%20step%203.png?alt=media)
@@ -30,113 +19,13 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 - In console we have to clone a repo and following the next commands.
 ```
 >$ git clone https://github.com/rulorules99/angular-scaffolding.git
->$ cd angular-scaffolding 
->$ sudo rm -r .git 
->$ git init
->$ git add -A
->$ git commit -m "first commit"
->$ git remote add origin https://rulorules99@bitbucket.org/rulorules99/example.git
->$ git push -u origin master
+>$ cd angular-scaffolding
+>$ ./init-repo https://rulorules99@bitbucket.org/rulorules99/example.git
+>$ ./init name-of-project
 ```
 
 - In the last step i used `https://rulorules99@bitbucket.org/rulorules99/example.git` that was my repo create 
 you must change for you own repository.
-
-### Change then project name
-For change the name in the project modify the next files
- 
-- In `agular.json` change `angular-scaffolding` for you name project Example
-```
-  .....
-  "projects": {
-    "my-project-name": {
-    .....
-```
-
-```
- .....
- "build": {
-    "builder": "@angular-devkit/build-angular:browser",
-        "options": {
-           "outputPath": "dist/my-project-name",
-            "index": "src/index.html",
-            .......
-```
-
-```
-  .....
-  "serve": {
-   "builder": "@angular-devkit/build-angular:dev-server",
-   "options": {
-     "browserTarget": "my-project-name:build"
-   },
-   "configurations": {
-     "production": {
-       "browserTarget": "my-project-name:build:production"
-     },
-     "hmr": {
-       "hmr": true,
-       "browserTarget": "my-project-name:build:hmr"
-     },
-     "dev": {
-       "hmr": false,
-       "browserTarget": "my-project-name:build:dev"
-     },
-     "qa": {
-       "hmr": false,
-       "browserTarget": "my-project-name:build:qa"
-     }
-   }
-  .....
-```
-
-```
-  .....
-  "extract-i18n": {
-      "builder": "@angular-devkit/build-angular:extract-i18n",
-      "options": {
-        "browserTarget": "my-project-name:build"
-      }
-    },
-    .....
-```
-
-```
-......
-"my-project-name-e2e": {
-  "root": "e2e/",
-  "projectType": "application",
-  "prefix": "",
-  "architect": {
-    "e2e": {
-      "builder": "@angular-devkit/build-angular:protractor",
-      "options": {
-        "protractorConfig": "e2e/protractor.conf.js",
-        "devServerTarget": "my-project-name:serve"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "my-project-name:serve:production"
-        }
-      }
-    },
- ......
-```
-
-```
- ....
- "defaultProject": "my-project-name"
-```
-- In `package.json` change `angular-scaffolding` for you name project Example
-```
- "name": "my-project-name",
- .......
-```
-
-- In the next files `e2e/src/app.e2e-spec.ts`, 
-`package-lock.json`, 
-`src/app/app.component.spec.ts`, 
-`src/app/app.component.ts` find `angular-scaffolding` and replace for the name of your project
 
 
 ## Scaffolding
