@@ -11,7 +11,7 @@ before_script:
 script:
   - ng lint
   - ng test --watch=false --browsers=ChromeHeadless
-  - npm run build:dev --prod --base-href https://rulorules99.github.io/agular-scaffolding/
+  - npm run build:dev --prod --base-href https://rulorules99.github.io/angular-scaffolding/
 deploy:
   provider: pages
   skip_cleanup: true
