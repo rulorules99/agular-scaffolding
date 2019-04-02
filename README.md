@@ -20,7 +20,7 @@ In the current example we create from [BITBUCKET](https://bitbucket.org/)
 ```
 >$ git clone https://github.com/rulorules99/angular-scaffolding.git
 >$ cd angular-scaffolding
->$ ./init-repo https://rulorules99@bitbucket.org/rulorules99/example.git
+>$ ./init_repo https://rulorules99@bitbucket.org/rulorules99/example.git
 >$ ./init name-of-project
 ```
 
