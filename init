@@ -23,4 +23,8 @@ done
 
 rm ./init
 
+git add -A
+git commit -m "Renaming project"
+git push -u origin master
+
 exit 1
