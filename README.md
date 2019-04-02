@@ -1,6 +1,6 @@
 # AgularScaffolding
 
-A scaffolding in angular 7 to include auth and main strucrure to start projects.
+A scaffolding in angular 7 to include auth and main strucrure to start projects example [here](https://rulorules99.github.io/angular-scaffolding).
 
 ## Quick start
 
