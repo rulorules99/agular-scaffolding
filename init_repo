@@ -2,11 +2,14 @@
 
 [[ $# -eq 0 ]] && { echo 'you must supply a repo path' ; exit 0; } || repo=$1
 
-echo $repo
-
 sudo rm -r .git
 git init
 git add -A
 git commit -m "first commit"
 git remote add origin $repo
 git push -u origin master
+
+rm ./.travis.yml
+rm ./init_repo
+
+exit 1
