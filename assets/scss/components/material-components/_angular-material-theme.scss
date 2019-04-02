@@ -1,0 +1,31 @@
+/*
+ * ANGULAR MATERIAL CUSTOM THEME
+ * documentation: https://material.angular.io/guide/theming
+ */
+
+
+// angular core
+@import '~@angular/material/theming';
+
+// font settings
+// font-size/line-height/font-weight
+$custom-typography: mat-typography-config(
+  $font-family: '#{$body-sans-serif-font}',
+  $headline: mat-typography-level(27px, 1.25, bold),
+  $title: mat-typography-level(23px, 1.25, bold),
+  $button: mat-typography-level($mat-control-base-font-size, 1.25, normal)
+);
+
+// angular material core mixin
+@include mat-core($custom-typography);
+
+// mat-palette($base-palette, $default: 500, $lighter: 100, $darker: 700)
+$bodypeace-app-primary: mat-palette($primary-color-palette, 500, 300, 700); // primary color
+$bodypeace-app-accent:  mat-palette($accent-color-palette, 500, A200, A400); // accent color
+$bodypeace-app-warn:    mat-palette($warn-color-palette); // warn color
+
+// Create the theme object (a Sass map containing all of the palettes).
+$bodypeace-app-theme: mat-light-theme($bodypeace-app-primary, $bodypeace-app-accent, $bodypeace-app-warn);
+
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($bodypeace-app-theme);

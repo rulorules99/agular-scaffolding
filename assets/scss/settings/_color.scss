@@ -1,0 +1,45 @@
+/*
+ * GLOBAL COLOR SETTINGS
+ * color setting for all components
+ */
+
+// imported functions
+@import "../tools/all";
+
+
+/* no semantic colors
+ ******************************************************************************/
+$silver-chalice:    #b2b2b2;
+$alto:              #DDD;
+$mine-shaft:        #262626;
+$mine-shaft-2:      #333333;
+$silver-chalice:    #A1A1A1;
+$resolution-blue:   #002F87;
+$seashell:          #F1F1F1;
+$cinnabar:          #E64B38;
+$heather:           #B7C0D2;
+$bombay:            #B4B9BE;
+$anakiwa:           #A8D0FF;
+$alabaster:         #FAFAFA;
+$mercury:           #E5E5E5;
+$aluminium:         #AAAEB3;
+$gray:              #929292;
+$shark:             #212529;
+$porcelain:         #ECEFF1;
+
+/* brand colors
+ ******************************************************************************/
+$color-brand-primary:       getMapValue($primary-color-palette, 500);
+$color-brand-accent:        getMapValue($accent-color-palette, 500);
+$color-brand-danger:        getMapValue($warn-color-palette, 500);
+$color-brand-success:       getMapValue($success-color-palette, 500);
+
+
+/* gray scale
+ ******************************************************************************/
+$color-white:         #FFF;
+$color-black:         #000;
+
+$color-gray:           $mine-shaft;
+$color-gray-light:     $silver-chalice;
+$color-gray-lightest:  $silver-chalice;
